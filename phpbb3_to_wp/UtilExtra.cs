@@ -23,6 +23,8 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.IO;
+using System.Windows.Forms;
 
 namespace phpbb3_to_wp
 {
@@ -57,27 +59,8 @@ namespace phpbb3_to_wp
         /// <returns></returns>
         public static string AdjustBBCodeExtra(string content)
         {
-            Regex rgx;
-            Match m;
-            // custom BBCode 
-            // [imgwidth=200]%%src%%[/imgwidth] -> <imgwidth200>%%src%%</imgwidth200> -> <img src="%%src%%" width="200" />
-            rgx = new Regex("<imgwidth200>(?<src>.+)</imgwidth200>");
-            m = rgx.Match(content);
-            while (m.Success)
-            {
-                string[] arySplit = m.Value.Split(new char[] { ' ' });
-                for (int i = 0; i < arySplit.Length; i++)
-                {
-                    string src = arySplit[i].Replace("<imgwidth200>", "").Replace("</imgwidth200>", "");
-
-                    content = content.Replace(arySplit[i]
-                        , "<img src=\"" + src + "\" width=\"200\" />");
-                }
-
-                m = m.NextMatch();
-            }
-
             return content;
         }
+
     }
 }
