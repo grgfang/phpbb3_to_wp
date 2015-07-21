@@ -1,0 +1,33 @@
+[attachment=0]=
+[attachment=1]=
+[attachment=2]=
+[/attachment]=
+[b]=<strong>
+[/b]=</strong>
+[code]=<pre><code>
+[/code]=</code></pre>
+[color=%%TEXT1%%]=<span style="color: %%TEXT1%%;">
+[/color]=</span>
+[i]=<em>
+[/i]=</em>
+[img]=<img>
+[/img]=</img>
+[list]=<ul>
+[/list:u]=</ul>
+[list=1]=<ol>
+[list=a]=<ol>
+[/list:o]=</ol>
+[quote=%%TEXT1%%]=quote=%%TEXT1%%<blockquote>
+[/quote]=</blockquote>
+[s]=<del>
+[/s]=</del>
+[size=75]=<span style="font-size: 75%; line-height: 58%;">
+[size=116]=<span style="font-size: 116%; line-height: 90%;">
+[size=117]=<span style="font-size: 117%; line-height: 90%;">
+[size=150]=<span style="font-size: 150%; line-height: 116%;">
+[/size]=</span>
+[url=%%TEXT1%%]=<a href="%%TEXT1%%">
+[url]=<a>
+[/url]=</a>
+[*]=<li>
+[/*:m]=</li>

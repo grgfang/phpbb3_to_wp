@@ -8,22 +8,117 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace phpbb3_to_wp.Properties
-{
-
-
+namespace phpbb3_to_wp.Properties {
+    
+    
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "11.0.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
-    {
-
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "12.0.0.0")]
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Server=localhost;Database=phpbb3;Uid=root;Pwd=;")]
+        public string MySQLphpbb3ConnStr {
+            get {
+                return ((string)(this["MySQLphpbb3ConnStr"]));
+            }
+            set {
+                this["MySQLphpbb3ConnStr"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("phpbb_")]
+        public string TablePrefix {
+            get {
+                return ((string)(this["TablePrefix"]));
+            }
+            set {
+                this["TablePrefix"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string P2ADefault {
+            get {
+                return ((string)(this["P2ADefault"]));
+            }
+            set {
+                this["P2ADefault"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string P2AReMapping {
+            get {
+                return ((string)(this["P2AReMapping"]));
+            }
+            set {
+                this["P2AReMapping"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("wordpress_base.xml")]
+        public string WordpressBaseXML {
+            get {
+                return ((string)(this["WordpressBaseXML"]));
+            }
+            set {
+                this["WordpressBaseXML"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("one line one tag")]
+        public string TagList {
+            get {
+                return ((string)(this["TagList"]));
+            }
+            set {
+                this["TagList"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("[")]
+        public string BBCodeToHtmlTag {
+            get {
+                return ((string)(this["BBCodeToHtmlTag"]));
+            }
+            set {
+                this["BBCodeToHtmlTag"] = value;
+            }
+        }
 
-        public static Settings Default
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("[")]
+        public string ExcludeTopicsID
         {
             get
             {
-                return defaultInstance;
+                return ((string)(this["ExcludeTopicsID"]));
+            }
+            set
+            {
+                this["ExcludeTopicsID"] = value;
             }
         }
     }
