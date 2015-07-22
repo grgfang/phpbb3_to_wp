@@ -805,7 +805,7 @@ SELECT t1.post_subject
   , t1.post_text
   , ifnull(t2.username, t1.post_username) as post_username
   , from_unixtime(t1.post_time, '%Y-%m-%d, %H:%i:%S') as postDate
-  , date_format(convert_tz(from_unixtime(t1.post_time, '%Y-%m-%d %H:%i:%S'), '+00:00', '00:00'), '%Y-%m-%d %H:%i:%S') as postDateGmt
+  , from_unixtime(t1.post_time, '%Y-%m-%d, %H:%i:%S') as postDateGmt
   , t1.bbcode_uid
 from " + txtTablePrefix.Text + @"posts as t1
 left join " + txtTablePrefix.Text + @"users as t2 on t1.poster_id = t2.user_id
