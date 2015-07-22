@@ -718,7 +718,7 @@
             this.Controls.Add(this.txtWordpressBaseXml);
             this.Controls.Add(this.label1);
             this.Name = "frmMain";
-            this.Text = "phpbb3 to wp - v1.0.0";
+            this.Text = "phpbb3 to wp - v1.0.1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.groupBox1.ResumeLayout(false);

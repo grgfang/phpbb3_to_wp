@@ -463,7 +463,7 @@ order by t1.username
 
                     if (out_item_post_tag != "")
                     {
-                        out_item_post_tag += "\r\n" + new String(' ', 8);
+                        out_item_post_tag += new String(' ', 8);
                     }
                     string tmp_item_post_tag = @"<category domain=""post_tag"" nicename=""%%item_post_tag_nicename%%""><![CDATA[%%item_post_tag_CDATA%%]]></category>" + "\r\n";
 
