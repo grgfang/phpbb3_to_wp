@@ -14,6 +14,8 @@ develop environment:
 
 history:
 
+v1.0.2 - adjust postDateGmt format.
+
 v1.0.1 - adjust post_tag format.
 
 v1.0.0 - The first practical version.
