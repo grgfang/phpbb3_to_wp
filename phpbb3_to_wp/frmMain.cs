@@ -375,9 +375,10 @@ order by t1.username
 ";
                 int tmp_topic_id = int.Parse(dt_topics.Rows[i]["topic_id"].ToString());
                 if (exclude_topics_id.IndexOf("," + tmp_topic_id.ToString() + ",") != -1) { continue; }
+                string tmp_topic_title = Util.AdjustTitle(dt_topics.Rows[i]["topic_title"].ToString(), tmp_topic_id);
 
                 // fill %%title%%
-                tmp_item = tmp_item.Replace("%%title%%", dt_topics.Rows[i]["topic_title"].ToString());
+                tmp_item = tmp_item.Replace("%%title%%", tmp_topic_title);
                 // fill %%link%%
                 tmp_item = tmp_item.Replace("%%link%%", "http://localhost/wordpress/?p=" + tmp_topic_id.ToString());
                 // fill %%pubDate%%
@@ -392,7 +393,7 @@ order by t1.username
                 // fill %%item_category%%
                 tmp_item = tmp_item.Replace("%%item_category%%", out_item_category);
 
-                WriteLog(string.Format("Topic index={0}, id={1}, title={2}", i, tmp_topic_id, dt_topics.Rows[i]["topic_title"].ToString()));
+                WriteLog(string.Format("Topic index={0}, id={1}, title={2}", i, tmp_topic_id, tmp_topic_title));
 
                 // fill %%content_encoded%%
                 string tmp_content_encoded = "";
